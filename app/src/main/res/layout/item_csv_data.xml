@@ -1,0 +1,75 @@
+<!-- res/layout/item_csv_data.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="1000dp"
+
+    android:backgroundTint="#ffffff"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="5dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:padding="0dp"
+        android:layout_margin="3dp"
+        android:text="Column 1" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:padding="0dp"
+        android:layout_margin="3dp"
+
+        android:text="Column 2" />
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:padding="0dp"
+        android:layout_margin="3dp"
+        android:layout_height="wrap_content"
+        android:text="Column 2" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       >
+    <TextView
+        android:id="@+id/text4"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:layout_margin="3dp"
+        android:text="Column 2" />
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:padding="0dp"
+        android:layout_margin="3dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Column 2" />
+    </LinearLayout>
+    <!-- Add more TextViews for additional columns -->
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

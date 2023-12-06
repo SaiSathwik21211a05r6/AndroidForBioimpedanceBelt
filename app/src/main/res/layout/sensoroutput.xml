@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/hexcolor_co__9796f0_fbc7d4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/snaosheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:gravity="center"
+        android:text="Snaps"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+
+        >
+        <!--Name of the grocery added-->
+        <TextView
+            android:id="@+id/frequencyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="" />
+        <!--Name of the grocery added-->
+        <TextView
+            android:id="@+id/bioImpedanceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="" />
+
+        <!--Name of the grocery added-->
+        <TextView
+            android:id="@+id/phaseAngleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="" />
+
+        <TextView
+            android:id="@+id/lastView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="" />
+
+    </LinearLayout>
+
+    <!-- <Button
+         android:id="@+id/btn_read_emergency"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/btn_read_connection"
+         android:layout_marginEnd="8dp"
+         android:layout_marginStart="8dp"
+         android:text="READ EMERGENCY" />
+
+     <Button
+         android:id="@+id/btn_read_battery"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/btn_read_emergency"
+         android:layout_marginEnd="8dp"
+         android:layout_marginStart="8dp"
+         android:text="READ BATTERY" />
+
+     <Button
+         android:id="@+id/btn_write_emergency"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginEnd="8dp"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="8dp"
+         android:layout_below="@+id/btn_read_battery"
+         android:layout_marginBottom="8dp"
+         android:text="Write Emergency"
+         app:layout_constraintBottom_toBottomOf="parent"
+         tools:layout_editor_absoluteX="0dp" />
+     <Button
+         android:id="@+id/btn_write_connection"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginEnd="8dp"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="8dp"
+         android:layout_below="@+id/btn_write_emergency"
+         android:layout_marginBottom="8dp"
+         android:text="Write Connection"
+         app:layout_constraintBottom_toBottomOf="parent"
+         tools:layout_editor_absoluteX="0dp" />
+
+     <Button
+         android:id="@+id/btn_write_battery"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginEnd="8dp"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="8dp"
+         android:layout_below="@+id/btn_write_connection"
+         android:layout_marginBottom="8dp"
+         android:text="Write Battery Level"
+         app:layout_constraintBottom_toBottomOf="parent"
+         tools:layout_editor_absoluteX="0dp" />
+
+     <TextView
+         android:id="@+id/tv_result"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/btn_write_battery"
+         android:layout_marginBottom="8dp"
+         android:layout_marginEnd="8dp"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="8dp"
+         android:text="TextView" />-->
+</RelativeLayout>
+

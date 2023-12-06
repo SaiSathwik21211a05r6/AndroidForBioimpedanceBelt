@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Patient screen-->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+<!--Using Relative Layout for the main window of the app-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--Th6te headng of the app showing Android Grocery, the name of the application-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hideOnScroll="false"
+
+        android:background="#f8f8ff">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Patient List"
+        android:textSize="30dp"
+        android:gravity="left"
+        android:layout_gravity="left"
+android:layout_margin="10dp"
+       android:textColor="@color/black"
+        android:id="@+id/tv"
+        />
+    </com.google.android.material.appbar.AppBarLayout>
+    <!--The layout showing the list of groceries added by the user-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:id="@+id/recview"
+        tools:listitem="@layout/patientlistrecycler"
+        />
+
+    <!--The add button to add new groceries-->
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addb"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@id/recview"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="211dp"
+        android:layout_marginBottom="33dp"
+        android:src="@drawable/ic_baseline_add_24"
+        android:tint="#FF3700B3"
+        app:backgroundTint="@color/white"
+        android:layout_alignRight="@id/recview" />-->
+</LinearLayout>
+</ScrollView>

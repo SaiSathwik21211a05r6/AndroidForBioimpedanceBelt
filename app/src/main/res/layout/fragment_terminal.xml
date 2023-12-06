@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Menu for future versions-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:elevation="1000dp"
+        android:backgroundTint="#ffffff"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="5dp">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+        android:elevation="4dp"
+    tools:ignore="MissingDefaultResource">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Readings"
+        android:textSize="40dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/hexcolor_co__9796f0_fbc7d4"
+        android:textColor="#F05F57"
+        android:id="@+id/output"
+        />
+
+    <LinearLayout
+        android:id="@+id/controlLines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ToggleButton
+            android:id="@+id/controlLineRts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48sp"
+            android:textOff="RTS"
+            android:textOn="RTS" />
+
+        <ToggleButton
+            android:id="@+id/controlLineCts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48sp"
+            android:clickable="false"
+            android:textColor="@android:color/secondary_text_dark"
+            android:textOff="CTS"
+            android:textOn="CTS" />
+
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="6dp" />
+
+        <ToggleButton
+            android:id="@+id/controlLineDtr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48sp"
+            android:textOff="DTR"
+            android:textOn="DTR" />
+
+        <ToggleButton
+            android:id="@+id/controlLineDsr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:minWidth="48sp"
+            android:textColor="@android:color/secondary_text_dark"
+            android:textOff="DSR"
+            android:textOn="DSR" />
+
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="6dp" />
+
+        <ToggleButton
+            android:id="@+id/controlLineCd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:minWidth="48sp"
+            android:textColor="@android:color/black"
+            android:textOff="CD"
+            android:textOn="CD" />
+
+        <ToggleButton
+            android:id="@+id/controlLineRi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48sp"
+            android:clickable="false"
+            android:textColor="@android:color/black"
+            android:textOff="RI"
+            android:textOn="RI" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="2dp" />
+   <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+       android:elevation="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recview"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="8dp"
+        tools:listitem="@layout/outdatalist" />
+
+    <TextView
+        android:id="@+id/receive_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+        android:freezesText="true"
+        android:gravity="bottom"
+        android:scrollbars="vertical"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="?android:attr/listDivider"
+        android:layout_height="0dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:color="@color/black"
+
+                android:layout_marginStart="8dp"
+                android:background="@drawable/edittext"
+                android:inputType="number"
+
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="25sp"/>
+
+
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/edittext"
+
+                android:color="@color/black"
+                android:layout_marginStart="8dp"
+                android:inputType="number"
+
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="25sp" />
+
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input3"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="8dp"
+                android:color="@color/black"
+
+                android:background="@drawable/edittext"
+                android:inputType="number"
+
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="25sp"/>
+
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input4"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="8dp"
+                android:color="@color/black"
+
+                android:background="@drawable/edittext"
+                android:inputType="number"
+
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="25sp"/>
+
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/startbutton"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:padding="5dp"
+            android:text="Start"
+            android:textSize="12sp"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/stopbutton"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:padding="5dp"
+            android:text="Stop"
+            android:textSize="12sp"
+            android:textColor="@color/white" />
+
+        <!--Button to add new grocery-->
+        <Button
+            android:id="@+id/add"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+
+            android:padding="5dp"
+            android:text="Save"
+            android:textSize="12sp"
+            android:background="@color/white"
+            android:textColor="#000000"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+
+        android:orientation="horizontal">
+    <EditText
+        android:id="@+id/send_text"
+        android:layout_width="285dp"
+        android:layout_height="20dp"
+        android:layout_weight="1"
+android:textColor="@color/black"
+        android:inputType="text|textNoSuggestions"
+        android:singleLine="true" />
+
+    <ImageButton
+        android:id="@+id/send_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_send_white_24dp" />
+    </LinearLayout>
+
+</LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>

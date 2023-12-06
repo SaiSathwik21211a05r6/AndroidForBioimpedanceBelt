@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Delete confirmation-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Do you want to delete this patient?"
+        android:id="@+id/Patientdeleteconfirm"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="30dp"
+        android:textSize="23dp"
+        android:textColor="@color/black"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#FFFFFFFF"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelbutton"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+android:background="@color/white"
+            android:padding="5dp"
+            android:text="ok"
+            android:textColor="#000000" />
+
+        <!--Button to add new grocery-->
+        <Button
+            android:id="@+id/add"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

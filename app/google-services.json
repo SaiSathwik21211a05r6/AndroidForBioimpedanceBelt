@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "223967693522",
+    "project_id": "readingssample",
+    "storage_bucket": "readingssample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223967693522:android:ee520dac08ccf20dd0bb0b",
+        "android_client_info": {
+          "package_name": "com.example.eegreader"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTG-MI8vTAZfk4N1qik8dI-v-6-4Crfks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">dropDownMenuExample</string>
+    <string name="char_uuid_emergency" />
+    <string name="char_uuid_emergency_call" />
+    <string name="location_permission_disabled" />
+    <string name="ok" />
+    <string name="cancel" />
+    <string name="location_permission_not_granted" />
+    <string name="char_uuid_missed_calls" />
+    <string name="devices" />
+    <string-array name="BloodGroupselection">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+    <string-array name="RaceSelection">
+        <item>South Indian</item>
+        <item>North Indian</item>
+    </string-array>
+    <string-array name="HeightUnitSelection">
+        <item>cms</item>
+        <item>Feet</item>
+    </string-array>
+    <string-array name="WeightUnitSelection">
+        <item>kgs</item>
+        <item>pounds</item>
+    </string-array>
+    <string-array name="frequencyselection">
+        <item>kgs</item>
+        <item>pounds</item>
+    </string-array>
+</resources>

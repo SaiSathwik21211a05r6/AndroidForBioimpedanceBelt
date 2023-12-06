@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Visits table-->
+<!--Cardview to show some elevation in displaying the list of groceries added by the user-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="1000dp"
+android:id="@+id/recyccard"
+
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="5dp">
+    <!--The elements in each element of the list of groceries added by the user are arranged in Relative layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="5"
+
+            android:id="@+id/main"
+            >
+            <!--The itemname,quantity and price are arranged in linear layout with horizontal orienation-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5"
+
+                android:id="@+id/details"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:padding="0dp"
+                    android:layout_margin="0dp"
+                    android:id="@+id/patid"/>
+                <TextView
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:padding="4dp"
+                    android:layout_margin="3dp"
+                    android:id="@+id/visit"/>
+                <TextView
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="Age"
+                    android:textColor="@color/black"
+                    android:padding="4dp"
+                    android:layout_margin="3dp"
+                    android:id="@+id/visitdate"/>
+
+                <TextView
+                    android:id="@+id/visittime"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="0.5"
+                    android:padding="4dp"
+                    android:text="Gender"
+                    android:textColor="@color/black" />
+
+
+                <!--The layout requirements for the delete button-->
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5"
+
+                android:id="@+id/clindetails"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:padding="0dp"
+                    android:layout_margin="0dp"
+                    android:id="@+id/avgpatid"/>
+                <TextView
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:padding="4dp"
+                    android:layout_margin="3dp"
+                    android:id="@+id/avgbioimp"/>
+                <TextView
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="Age"
+                    android:textColor="@color/black"
+                    android:padding="4dp"
+                    android:layout_margin="3dp"
+                    android:id="@+id/avgphase"/>
+
+                <TextView
+                    android:id="@+id/avgfreq"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="0.5"
+                    android:padding="4dp"
+                    android:text="avgfreq"
+                    android:textColor="@color/black" />
+
+
+                <!--The layout requirements for the delete button-->
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5"
+
+                android:id="@+id/extras"
+                >
+                <!--The next line displaying the total cost of a particular grocery-->
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Modify"
+                    android:id="@+id/status"
+                    android:background="@drawable/recycbottom"
+                    android:layout_margin="3dp"
+                    android:padding="0dp"
+                    android:textColor="@color/white"
+                    android:layout_alignParentEnd="true"
+                    style="?android:attr/buttonBarButtonStyle" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="View"
+                    android:id="@+id/record"
+                    android:background="@drawable/recycbottom"
+                    android:layout_margin="3dp"
+                    android:padding="0dp"
+                    android:textColor="@color/white"
+                    android:layout_alignParentEnd="true"
+                    style="?android:attr/buttonBarButtonStyle" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Report"
+                    android:id="@+id/report"
+                    android:background="@drawable/recycbottom"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    android:textColor="@color/white"
+                    android:layout_alignParentEnd="true"
+                    style="?android:attr/buttonBarButtonStyle" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/recycbottom"
+                    android:layout_margin="3dp"
+                    android:padding="0dp"
+                    android:textColor="@color/white"
+                    android:layout_alignParentEnd="true"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:id="@+id/Deleterecycbutton"
+
+                    android:layout_marginStart="103dp"
+                    android:text="Delete"
+
+                    android:src="@drawable/ic_baseline_delete_24"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Home screen-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hexcolor_co__9796f0_fbc7d4">
+
+    <!-- App Logo or Banner Image -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:elevation="8dp"
+        android:backgroundTint="#ffffff"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="5dp"
+        android:layout_below="@id/appLogo">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appLogo"
+        android:layout_margin="8dp"
+        android:elevation="1000dp"
+        android:background="@drawable/panelshape"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"> <!-- Center the content inside the LinearLayout -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+
+    <!-- Register Patient Button -->
+
+    <com.google.android.material.button.MaterialButton
+        app:rippleColor="@color/white"
+        android:layout_marginTop="60dp"
+
+        android:id="@+id/viewpatientlist"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#800080"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/appLogo"
+
+        android:text="Access Readings"
+        android:textSize="12sp"
+
+        android:textColor="#FFFFFF"
+        android:elevation="1000dp"
+
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/patientregistration"
+        app:rippleColor="@color/white"
+        android:backgroundTint="#ffffff"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewpatientlist"
+        android:text="Register"
+        android:textSize="12sp"
+        android:layout_marginTop="50dp"
+        android:textColor="#800080"
+
+
+        style="?attr/materialButtonOutlinedStyle"
+        android:textStyle="bold"
+        />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:elevation="30000dp"
+
+            android:backgroundTint="#ffffff"
+            app:cardCornerRadius="10dp"
+            app:cardMaxElevation="5dp"
+            android:layout_marginTop="40dp">
+        <ImageButton  android:id="@+id/myImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="100dp"
+            android:background="@drawable/uploadsyncarrow"
+            android:contentDescription="Description of the image for accessibility"
+        />
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload/Sync"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="#00ffff"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

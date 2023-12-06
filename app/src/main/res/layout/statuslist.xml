@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Visits screen-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+<!--Using Relative Layout for the main window of the app-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+   >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hideOnScroll="false"
+
+        android:background="#f8f8ff">
+    <!--Th6te headng of the app showing Android Grocery, the name of the application-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="History"
+            android:textSize="30dp"
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/tv"
+            />
+    <include layout="@layout/top_bar"
+        android:elevation="30000dp"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+  <!--  <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:weekDayTextAppearance="@color/black"
+        android:focusedMonthDateColor="@color/black"
+
+        android:background="@drawable/rounded_background"
+
+        android:layout_height="wrap_content"/>-->
+    <!--The layout showing the list of groceries added by the user-->
+    <TextView
+        android:id="@+id/noDataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:text="No data available"
+android:textColor="@color/black"
+        android:visibility="gone"
+        />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:id="@+id/recview1"
+        tools:listitem="@layout/statuslistrecycler"
+
+        />
+
+
+    <!--The add button to add new groceries-->
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addb"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@id/recview"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="211dp"
+        android:layout_marginBottom="33dp"
+        android:src="@drawable/ic_baseline_add_24"
+        android:tint="#FF3700B3"
+        app:backgroundTint="@color/white"
+        android:layout_alignRight="@id/recview" />-->
+</LinearLayout>
+
+</ScrollView>

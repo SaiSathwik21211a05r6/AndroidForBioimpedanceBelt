@@ -1,0 +1,11 @@
+<!-- pause_shape.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <size
+        android:width="16dp"
+        android:height="16dp"/>
+
+    <solid android:color="#FF0000"/> <!-- You can set the color as needed -->
+
+</shape>

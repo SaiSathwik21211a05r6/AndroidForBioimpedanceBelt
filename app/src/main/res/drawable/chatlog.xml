@@ -1,0 +1,27 @@
+<!-- chat_bubble.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background shape for the chat bubble -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="206dp" />
+            <solid android:color="#009688" /> <!-- Change the color as needed -->
+        </shape>
+    </item>
+
+    <!-- Left-pointing tail for the chat bubble -->
+    <item
+        android:right="-3dp"
+        android:top="-3dp"
+        android:bottom="-3dp">
+        <rotate
+            android:fromDegrees="-45"
+            android:pivotX="100%"
+            android:pivotY="100%">
+            <shape android:shape="rectangle"
+                >
+                <corners android:radius="6dp" />
+                <solid android:color="#009688" /> <!-- Use the same color as the bubble -->
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

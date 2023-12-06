@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Readings Screen-->
+
+    <!--Using Relative Layout for the main window of the app-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--Th6te headng of the app showing Android Grocery, the name of the application-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Record"
+
+            android:textSize="40dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/hexcolor_co__9796f0_fbc7d4"
+            android:textColor="#F05F57"
+            android:id="@+id/output"
+            />
+
+        <LinearLayout
+            android:id="@+id/controlLines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ToggleButton
+                android:id="@+id/controlLineRts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="48sp"
+                android:textOff="RTS"
+                android:textOn="RTS" />
+
+            <ToggleButton
+                android:id="@+id/controlLineCts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="48sp"
+                android:clickable="false"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textOff="CTS"
+                android:textOn="CTS" />
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="6dp" />
+
+            <ToggleButton
+                android:id="@+id/controlLineDtr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="48sp"
+                android:textOff="DTR"
+                android:textOn="DTR" />
+
+            <ToggleButton
+                android:id="@+id/controlLineDsr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:minWidth="48sp"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textOff="DSR"
+                android:textOn="DSR" />
+
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="6dp" />
+
+            <ToggleButton
+                android:id="@+id/controlLineCd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:minWidth="48sp"
+                android:textColor="@android:color/black"
+                android:textOff="CD"
+                android:textOn="CD" />
+
+            <ToggleButton
+                android:id="@+id/controlLineRi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="48sp"
+                android:clickable="false"
+                android:textColor="@android:color/black"
+                android:textOff="RI"
+                android:textOn="RI" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="2dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        >
+        <include layout="@layout/top_bar"
+            android:elevation="30000dp"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_background"
+                android:layout_marginStart="8dp"
+                android:layout_height="200dp" />
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_background"
+                android:layout_marginEnd="8dp"
+                android:layout_height="200dp" />
+        </LinearLayout>
+        <!--   <TextView
+               android:id="@+id/heading"
+               android:layout_width="match_parent"
+
+               android:layout_height="25dp"
+               android:background="@drawable/recycbottom"
+               android:layout_marginStart="18dp"
+               android:layout_marginEnd="18dp"
+               android:textSize="15sp"
+               android:layout_weight="1"
+               android:freezesText="true"
+               android:text="Rzmag"
+               android:gravity="bottom"
+               android:padding="2dp"
+               android:scrollbars="vertical"
+               android:textColor="@color/white"
+               android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+       -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recview2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_background"
+            tools:listitem="@layout/item_csv_data" />
+
+
+
+        <!--The add button to add new groceries-->
+        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addb"
+            android:layout_width="wrap_content"
+            android:layout_alignEnd="@id/recview"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="211dp"
+            android:layout_marginBottom="33dp"
+            android:src="@drawable/ic_baseline_add_24"
+            android:tint="#FF3700B3"
+            app:backgroundTint="@color/white"
+            android:layout_alignRight="@id/recview" />-->
+
+    </LinearLayout>
+</LinearLayout>

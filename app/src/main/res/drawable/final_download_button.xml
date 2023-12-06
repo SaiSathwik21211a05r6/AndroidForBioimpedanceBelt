@@ -1,0 +1,23 @@
+<!-- pause_button.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Rounded Rectangle Background -->
+
+    <item
+        android:drawable="@drawable/rounded_border"
+
+
+        />
+
+    <!-- Pause Symbol -->
+    <item
+        android:drawable="@drawable/baseline_download_24"
+        android:width="30dp"
+        android:height="20dp"
+        android:start="6dp"
+        android:top="12dp"
+        android:bottom="10dp"
+        android:end="6dp"
+        android:gravity="center"/>
+
+</layer-list>

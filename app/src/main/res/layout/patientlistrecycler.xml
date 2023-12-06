@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Patient table-->
+<!--Cardview to show some elevation in displaying the list of groceries added by the user-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="30000dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:backgroundTint="#f5f5f5"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/recyccard"
+    app:cardMaxElevation="5dp">
+    <!--The elements in each element of the list of groceries added by the user are arranged in Relative layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+
+        >
+        <!--The elements in each element of the list of groceries added by the user are arranged in Relative layout-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="5"
+                android:background="@android:color/transparent"
+
+                android:id="@+id/main"
+                >
+                <LinearLayout
+                    android:id="@+id/Namefield"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:background="@android:color/transparent"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Patient ID"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+
+                        android:padding="0dp"
+                        android:layout_margin="5dp"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:background="@android:color/transparent"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:padding="0dp"
+                        android:layout_margin="5dp"
+
+                        android:id="@+id/patientname"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:background="@android:color/transparent"
+
+                    >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PID"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                />
+                <TextView
+                    android:id="@+id/pid_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PID"
+
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                />
+                </LinearLayout>
+                <!--The itemname,quantity and price are arranged in linear layout with horizontal orienation-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:background="@android:color/transparent"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Age:"
+android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:padding="0dp"
+                        android:textSize="14sp"
+                        android:layout_margin="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Age"
+
+                        android:textColor="#808080"
+                        android:padding="0dp"
+                        android:textSize="14sp"
+                        android:layout_margin="5dp"
+                        android:id="@+id/Age"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:padding="0dp"
+                        android:textSize="14sp"
+                        android:text="Sex"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+                    <TextView
+                        android:id="@+id/Gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:padding="0dp"
+                        android:textSize="14sp"
+                        android:text="Gender"
+                        android:textColor="#808080" />
+
+                    <!--The layout requirements for the delete button-->
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/details"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toStartOf="@id/status"
+                        android:padding="0dp"
+                        android:text="Group"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/BloodGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toStartOf="@id/status"
+                        android:padding="0dp"
+                        android:text="Blood Group"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/details"
+                    >
+                    <TextView
+                        android:id="@+id/pid_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date of Registration"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/details"
+                    >
+                    <TextView
+                        android:id="@+id/dor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date of Registration"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:background="@android:color/transparent"
+        android:id="@+id/extras"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:background="@android:color/transparent"
+            android:id="@+id/extras"
+            >
+            <!--The next line displaying the total cost of a particular grocery-->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="30000dp"
+
+android:backgroundTint="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/Deleterecycbutton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="46dp"
+                android:layout_height="28sp"
+                android:backgroundTint="#800080"
+android:elevation="200dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/addreadings"
+
+
+                />
+            <TextView  android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="30000dp"
+
+                android:backgroundTint="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <Button
+                android:id="@+id/Deletebutton"
+                android:layout_width="46dp"
+                android:layout_height="28sp"
+
+                android:backgroundTint="#800080"
+                android:layout_margin="10dp"
+                android:layout_marginStart="2dp"
+
+                android:background="@drawable/enter_arrow"
+                android:padding="0dp"
+                android:elevation="10000dp"
+                android:textColor="@color/white"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription"
+
+                style="?android:attr/buttonBarButtonStyle" />
+            <TextView  android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:background="@android:color/transparent"
+            android:id="@+id/extras"
+            >
+            <!--The next line displaying the total cost of a particular grocery-->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="30000dp"
+
+                android:backgroundTint="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/journalbutton"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="46dp"
+                    android:layout_height="28sp"
+                    android:backgroundTint="#800080"
+                    android:elevation="200dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/journal"
+
+
+                    />
+            <TextView  android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clinical"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="30000dp"
+
+                android:backgroundTint="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <Button
+                    android:id="@+id/reportbutton"
+                    android:layout_width="46dp"
+                    android:layout_height="28sp"
+
+                    android:backgroundTint="#800080"
+                    android:layout_margin="10dp"
+
+                    android:layout_marginStart="2dp"
+
+                    android:background="@drawable/report"
+                    android:padding="0dp"
+                    android:elevation="10000dp"
+                    android:textColor="@color/white"
+                    app:tint="@color/white"
+                    tools:ignore="ContentDescription"
+
+                    style="?android:attr/buttonBarButtonStyle" />
+                  <TextView  android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Report"
+                      android:textColor="@color/black"
+                      android:gravity="center_vertical"
+                      android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

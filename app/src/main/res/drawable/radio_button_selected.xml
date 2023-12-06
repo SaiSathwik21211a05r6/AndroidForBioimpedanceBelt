@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Hollow circle background -->
+    <item android:drawable="@drawable/hollow_circle" />
+
+    <!-- Solid black circle in the center -->
+    <item android:drawable="@drawable/solid_circle" />
+</layer-list>
+<!--selected radio button-->

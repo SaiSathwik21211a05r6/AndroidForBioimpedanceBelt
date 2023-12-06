@@ -1,0 +1,29 @@
+<!-- rectangle_with_lines_lines.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Three Parallel Lines -->
+    <item android:left="16dp" android:right="16dp" android:top="16dp" android:bottom="16dp">
+        <shape android:shape="line">
+            <stroke
+                android:color="#000000"
+                android:width="4dp" />
+        </shape>
+    </item>
+
+    <item android:left="16dp" android:right="16dp" android:top="-108dp" android:bottom="32dp">
+        <shape android:shape="line">
+            <stroke
+                android:color="#000000"
+                android:width="4dp" />
+        </shape>
+    </item>
+
+    <item android:left="16dp" android:right="16dp" android:top="182dp" android:bottom="48dp">
+        <shape android:shape="line">
+            <stroke
+                android:color="#000000"
+                android:width="4dp" />
+        </shape>
+    </item>
+
+</layer-list>

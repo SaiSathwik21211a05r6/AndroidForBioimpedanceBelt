@@ -1,0 +1,31 @@
+<!-- pause_resume_button.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pressed/Clicked state -->
+    <item android:state_pressed="true"
+        android:state_hovered="true"
+        >
+        <layer-list>
+
+            <!-- Pause Shape -->
+            <item
+                android:drawable="@drawable/pause_button"
+                android:width="48dp"
+                android:height="48dp"
+                android:gravity="center"/>
+        </layer-list>
+    </item>
+
+    <!-- Default/Not Pressed state -->
+    <item>
+        <layer-list>
+            <!-- Resume Shape -->
+            <item
+                android:drawable="@drawable/final_resume_button"
+
+                android:gravity="center"/>
+        </layer-list>
+    </item>
+
+
+</selector>

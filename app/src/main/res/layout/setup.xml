@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--The UI for the dialog box to add new groceries in the app-->
+<!--Registration screen-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/hexcolor_co__9796f0_fbc7d4"
+        android:orientation="vertical"
+
+        >
+        <!--The elements in the dialog box are arranged in Relative layout-->
+
+        <!--Heading of the dialog box-->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hideOnScroll="false"
+            android:id="@+id/topbar"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/panelshape"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:elevation="30000dp"
+
+                android:backgroundTint="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                >
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/panelshape"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+
+
+                    >
+                    <TextView
+                        android:id="@+id/patientregistration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:text="Set your Device"
+
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/patientregistration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="left"
+                        android:justificationMode="inter_word"
+                        android:layout_margin="10dp"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:text="Not All the fields are edittable. Kindly enter correct values to ensure accurate readings are obtained."
+                        android:background="@drawable/rounded_background"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+
+                        />
+                    <include layout="@layout/top_bar"
+                        android:elevation="30000dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/panelshape"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+
+                android:background="@drawable/panelshape"
+                android:orientation="vertical">
+                <!--Name of the grocery added-->
+
+                <TextView
+                    android:id="@+id/patientheight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:layout_margin="10dp"
+                    android:text="Height"
+                    android:textColor="@color/black"
+                    android:textStyle="" />
+           <!--     <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/filledTextField"
+                        android:layout_width="match_parent"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/patientheightedit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+
+                            android:layout_margin="10dp"
+                            android:inputType="number"
+
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+
+                            android:textSize="25sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <Spinner
+                        android:id="@+id/raceedit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_weight="2"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/custom_spinner_button"
+                        />
+                </LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <NumberPicker
+                        android:id="@+id/heightPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/heightunitedit"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+
+                        android:layout_gravity="center_horizontal"
+                        />
+                    <Spinner
+                        android:id="@+id/heightunitedit"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/custom_spinner_button"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/patientheight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:text="Weight"
+                    android:textColor="@color/black"
+                    android:textStyle="" />
+<!--
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/filledTextField"
+                    android:layout_width="match_parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/patientweightedit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_margin="10dp"
+
+                        android:inputType="number"
+
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="25sp" />
+
+
+
+
+                </com.google.android.material.textfield.TextInputLayout>>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <NumberPicker
+                        android:id="@+id/weightPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/heightunitedit"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+
+                        android:layout_gravity="center_horizontal"
+                        />
+                    <Spinner
+                        android:id="@+id/weightunitedit"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/custom_spinner_button"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/patientheight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:text="BMI"
+                    android:textColor="@color/black"
+                    android:textStyle="" />
+
+                <com.google.android.material.slider.Slider
+                    android:valueFrom="0.0"
+                    android:valueTo="100.0"
+                    android:stepSize="10.0"
+                    android:id="@+id/bmiProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:max="30"
+                    android:progress="15"
+                    android:progressDrawable="@drawable/custom_seek_bar"
+                    android:paddingTop="2dp"
+                    android:background="@drawable/portalup2"
+                    android:layout_centerVertical="true"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/patientheight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="Do you have Diabetes?"
+                android:textColor="@color/black"
+                android:textStyle="" />
+
+
+            <RadioGroup
+                android:id="@+id/diabetes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:id="@+id/diabyes"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:padding="0dp" />
+
+                <RadioButton
+                    android:id="@+id/diabno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:text="No"
+                    android:padding="0dp" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/patientheight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="Do you have HTN?"
+                android:textColor="@color/black"
+                android:textStyle="" />
+
+
+            <RadioGroup
+                android:id="@+id/htn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+
+                    android:id="@+id/htnyes"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+
+                    android:id="@+id/htnno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"   android:text="No"
+                    android:padding="0dp" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/patientheight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:layout_weight="1"
+
+                android:text="Do you have Asthma?"
+                android:textColor="@color/black"
+                android:textStyle="" />
+
+
+            <RadioGroup
+                android:id="@+id/asthma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:id="@+id/asthmayes"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black" android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:padding="0dp" />
+
+                <RadioButton
+                    android:id="@+id/asthmano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"  android:text="No"
+                    android:padding="0dp" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/patientheight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+
+                android:layout_weight="1"
+                android:text="Do you smoke?"
+                android:textColor="@color/black"
+                android:textStyle="" />
+
+            <TextView
+                android:id="@+id/patientregistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="left"
+                android:text="[The data is used to clinically assess your prognosis and we strictly advise you to stop smoking for yours and others health and wellbeing.]"
+                android:justificationMode="inter_word"
+                android:layout_margin="10dp"
+                android:padding="4dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="#a9a9a9"
+                android:textSize="10sp"
+
+                />
+            <RadioGroup
+                android:id="@+id/smoke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:id="@+id/smokeyes"
+                    android:layout_width="wrap_content"
+
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"  android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:padding="0dp" />
+
+                <RadioButton
+                    android:id="@+id/smokeno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:text="No"
+                    android:padding="0dp" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/patientheight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="Do you consume alcohol?"
+                android:textColor="@color/black"
+                android:textStyle="" />
+            <TextView
+                android:id="@+id/patientregistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="left"
+                android:text="[The data is used to clinically assess your prognosis and we strictly advise you to stop consumption of alcohol for yours and others health and wellbeing.]"
+                android:justificationMode="inter_word"
+                android:layout_margin="10dp"
+                android:padding="4dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="#a9a9a9"
+                android:textSize="10sp"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/alcohol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:id="@+id/alcoholyes"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:padding="0dp" />
+
+                <RadioButton
+                    android:id="@+id/alcoholno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:text="No"
+                    android:padding="0dp" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/patientheight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="Prior MI?"
+                android:textColor="@color/black"
+                android:textStyle="" />
+
+
+            <RadioGroup
+                android:id="@+id/mi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:id="@+id/miyes"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:padding="0dp" />
+
+                <RadioButton
+                    android:id="@+id/mino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:text="No"
+                    android:padding="0dp" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/patientheight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="Prior CVA?"
+                android:textColor="@color/black"
+                android:textStyle="" />
+
+
+            <RadioGroup
+                android:id="@+id/cva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:id="@+id/cvayes"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:padding="0dp" />
+
+                <RadioButton
+                    android:id="@+id/cvano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:text="No"
+                    android:padding="0dp" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/patientheight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="Prior Stent?"
+                android:textColor="@color/black"
+                android:textStyle="" />
+
+
+            <RadioGroup
+                android:id="@+id/stent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:id="@+id/stentyes"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:padding="0dp" />
+
+                <RadioButton
+                    android:id="@+id/stentno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:text="No"
+                    android:padding="0dp" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/patientheight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="Prior CABG?"
+                android:textColor="@color/black"
+                android:textStyle="" />
+
+
+            <RadioGroup
+                android:id="@+id/cabg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:id="@+id/cabgyes"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:padding="0dp" />
+
+                <RadioButton
+                    android:id="@+id/cabgno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black"
+                    android:text="No"
+                    android:padding="0dp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancelbutton"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonshape"
+                android:padding="5dp"
+                android:text="Proceed"
+                android:textSize="12sp"
+                android:textColor="@color/white" />
+
+            <!--Button to add new grocery-->
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

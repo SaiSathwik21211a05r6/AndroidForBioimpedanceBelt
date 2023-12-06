@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.eegreader">
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-permission android:name="android.permission.USB_PERMISSION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+
+        android:enableOnBackInvokedCallback="true">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.eegreader.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PatientList"
+            android:theme="@style/Theme.Design.NoActionBar"
+
+            android:exported="true" />
+        <activity
+            android:name=".Journal"
+            android:theme="@style/Theme.Design.NoActionBar"
+
+            android:exported="true" />
+        <activity
+            android:name=".Acknowledgement"
+            android:theme="@style/Theme.Design.NoActionBar"
+
+            android:exported="true" />
+        <activity
+            android:name=".Visits"
+            android:theme="@style/Theme.Design.NoActionBar"
+            android:exported="true" />
+
+
+        <activity
+            android:name="com.example.eegreader.USB.USBClass"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:exported="true">
+
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/usb_device_filter" />
+            <meta-data
+                android:name="com.google.android.material.bottomappbar.BottomAppBar"
+                android:resource="@style/Widget.MaterialComponents.BottomAppBar" />
+
+        </activity>
+        <service android:name="com.example.eegreader.USB.SerialService" />
+        <activity
+            android:name=".Readings"
+            android:theme="@style/Theme.Design.NoActionBar"
+            android:exported="true"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".Graph.Archives"
+            android:theme="@style/Theme.Design.NoActionBar"
+            android:exported="true"
+            android:launchMode="singleTask"/>
+
+        <activity
+
+            android:name=".RecordScreen"
+            android:theme="@style/Theme.Design.NoActionBar"
+            android:exported="true"
+
+        >
+            <intent-filter>
+                <action android:name="com.example.eegreader.ACTION_DATA_AVAILABLE" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".AddPatient"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:exported="true">
+
+
+        </activity>
+        <activity
+            android:name=".Setup"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:exported="true">
+
+
+        </activity>
+        <service android:name=".BLEModule.BLEService" />
+    </application>
+
+
+</manifest>

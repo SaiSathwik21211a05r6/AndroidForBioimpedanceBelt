@@ -1,0 +1,328 @@
+<!-- res/layout/bottom_bar.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomBar"
+    android:elevation="30000dp"
+android:layout_gravity="bottom"
+    android:backgroundTint="#ffffff"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/rounded_background"
+        android:layout_gravity="bottom"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/genderedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:color="@color/black"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/usb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:color="@color/black"
+
+                    android:text="USB Serial"
+                    android:button="@drawable/radio_button_selector"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/ble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:color="@color/black"
+                    android:text="Bluetooth"
+                    android:layout_marginStart="10dp"
+                    android:button="@drawable/radio_button_selector"
+                    android:textColor="@color/black" />
+
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_background"
+
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Frequency"
+
+
+
+
+
+                    android:layout_weight="1"
+
+
+                    android:textColorHint="#a9a9a9"
+
+                 >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input1"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+
+
+                        android:background="@drawable/edittext"
+                        android:layout_weight="1"
+                        android:color="@color/black"
+                        android:elevation="30000dp"
+                        android:layout_margin="8dp"
+                        android:inputType="number"
+
+                        android:textColor="@color/black"
+                        android:textColorHint="#a9a9a9"
+                        android:hint="Frequency"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+
+
+                    android:background="@drawable/edittext"
+                    android:layout_weight="1"
+                    android:color="@color/black"
+                    android:elevation="30000dp"
+                    android:layout_margin="8dp"
+                    android:inputType="number"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="#a9a9a9"
+                    android:hint="Frequency"
+                    android:textSize="15sp" />
+
+
+
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+
+
+                    android:background="@drawable/edittext"
+                    android:layout_weight="1"
+                    android:color="@color/black"
+                    android:elevation="30000dp"
+                    android:layout_margin="8dp"
+                    android:inputType="number"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="#a9a9a9"
+                    android:hint="Freq End"
+                    android:textSize="15sp" />
+
+
+
+
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:elevation="30000dp"
+                    android:color="@color/black"
+                    android:padding="5dp"
+                    android:background="@drawable/edittext"
+                    android:inputType="number"
+                    android:hint="Freq Step"
+                    android:textColor="@color/black"
+                    android:textColorHint="#a9a9a9"
+                    android:textSize="15sp"/>
+
+
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input4"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:color="@color/black"
+                    android:padding="5dp"
+                    android:background="@drawable/edittext"
+                    android:inputType="number"
+                    android:elevation="30000dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#a9a9a9"
+                    android:hint="Datapoints"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/portalup"
+                    android:elevation="1000dp"
+                    android:layout_gravity="bottom"
+                    android:padding="2dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <ImageButton
+                        android:id="@+id/stopbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:background="@drawable/final_pause_button"
+
+
+
+
+                        android:contentDescription="Pause"
+
+                        app:elevation="1000dp"
+                        />
+                    <TextView
+                        android:id="@+id/receive_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="15sp"
+
+                        android:text="Stop"
+
+                        android:freezesText="true"
+                        android:layout_marginStart="5dp"
+
+                        android:textColor="@color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/startbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:background="@drawable/final_resume_button"
+
+
+                        android:contentDescription="Start"
+                        android:layout_gravity="center"
+
+
+                        app:elevation="1000dp"
+
+                        />
+                    <TextView
+                        android:id="@+id/receive_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="15sp"
+
+                        android:text="Start"
+
+                        android:freezesText="true"
+
+
+                        android:textColor="@color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/savebutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="Save"
+
+
+                        android:background="@drawable/final_download_button"
+
+
+
+                        android:layout_marginEnd="5dp"
+
+
+                        app:elevation="1000dp"
+                        />
+                    <TextView
+                        android:id="@+id/receive_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="15sp"
+
+                        android:text="Save"
+
+
+
+                        android:layout_marginEnd="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+            <!--Button to add new grocery-->
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

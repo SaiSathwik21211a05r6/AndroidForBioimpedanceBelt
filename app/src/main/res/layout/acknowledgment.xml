@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:elevation="30000dp"
+
+        android:backgroundTint="#ffffff"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="5dp"
+        >
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hideOnScroll="false"
+            android:id="@+id/topbar"
+
+            android:layout_weight="1"
+            android:background="#f8f8ff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Acknowledgement"
+                android:textSize="30dp"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/output"
+                />
+
+            <LinearLayout
+                android:id="@+id/controlLines"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ToggleButton
+                    android:id="@+id/controlLineRts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48sp"
+                    android:textOff="RTS"
+                    android:textOn="RTS" />
+
+                <ToggleButton
+                    android:id="@+id/controlLineCts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48sp"
+                    android:clickable="false"
+                    android:textColor="@android:color/secondary_text_dark"
+                    android:textOff="CTS"
+                    android:textOn="CTS" />
+
+                <View
+                    android:layout_height="match_parent"
+                    android:layout_width="6dp" />
+
+                <ToggleButton
+                    android:id="@+id/controlLineDtr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48sp"
+                    android:textOff="DTR"
+                    android:textOn="DTR" />
+
+                <ToggleButton
+                    android:id="@+id/controlLineDsr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:minWidth="48sp"
+                    android:textColor="@android:color/secondary_text_dark"
+                    android:textOff="DSR"
+                    android:textOn="DSR" />
+
+                <View
+                    android:layout_height="match_parent"
+                    android:layout_width="6dp" />
+
+                <ToggleButton
+                    android:id="@+id/controlLineCd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:minWidth="48sp"
+                    android:textColor="@android:color/black"
+                    android:textOff="CD"
+                    android:textOn="CD" />
+
+                <ToggleButton
+                    android:id="@+id/controlLineRi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="48sp"
+                    android:clickable="false"
+                    android:textColor="@android:color/black"
+                    android:textOff="RI"
+                    android:textOn="RI" />
+
+            </LinearLayout>
+
+            <include layout="@layout/top_bar"
+                android:elevation="30000dp"/>
+            <Spinner
+                android:id="@+id/frequencyedit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:background="@drawable/custom_spinner_button"
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/bottomBar"
+                android:nestedScrollingEnabled="true"
+                android:paddingTop="150dp"
+
+                android:clipToPadding="true"
+                android:background="@color/white"
+                android:clipToOutline="true"
+
+                android:orientation="vertical"
+                tools:ignore="MissingDefaultResource"
+                >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_gravity="center_horizontal"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="30000dp"
+
+                android:backgroundTint="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                android:layout_margin="8dp">
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart1"
+                    android:layout_width="match_parent"
+
+                    android:elevation="30000dp"
+                    android:background="@drawable/rounded_background"
+
+                    android:layout_height="180dp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="30000dp"
+
+                android:backgroundTint="#ffffff"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                android:layout_margin="8dp">
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart2"
+                    android:layout_width="match_parent"
+
+                    android:background="@drawable/rounded_background"
+                    android:elevation="30000dp"
+
+                    android:layout_height="180dp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:elevation="30000dp"
+                android:layout_margin="10dp"
+android:backgroundTint="@color/white"
+               android:background="@drawable/rounded_background"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    android:backgroundTint="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center_horizontal"
+                    >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:backgroundTint="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center_horizontal"
+                    >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_background"
+android:layout_weight="1"
+                   android:padding="10dp"
+                    android:layout_gravity="center_horizontal"
+                    >
+                <TextView
+                    android:id="@+id/patientid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+
+
+                    android:textSize="12dp"
+                    android:text="Average Bioimpedance from the last Month"
+                    android:textColor="@color/black"
+                    android:textStyle="" />
+                    <TextView
+                        android:id="@+id/lastmnth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+
+
+                        android:textSize="15dp"
+                        android:text="Average Bioimpedance from the last Reading"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_background"
+                    android:layout_weight="1"
+android:padding="10dp"
+android:layout_marginStart="6dp"
+                    android:layout_gravity="center_horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/patientid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+
+                        android:text="Average Bioimpedance from last day"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:textStyle="" />
+                    <TextView
+                        android:id="@+id/lstday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+
+
+                        android:text="Average Bioimpedance from last month"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:backgroundTint="@color/white"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center_horizontal"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/rounded_background"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:layout_gravity="center_horizontal"
+                            >
+                            <TextView
+                                android:id="@+id/patientid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+
+
+                                android:textSize="12dp"
+                                android:text="Average Bioimpedance from the last Reading"
+                                android:textColor="@color/black"
+                                android:textStyle="" />
+                            <TextView
+                                android:id="@+id/lstreading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+
+
+                                android:textSize="15dp"
+                                android:text="Average Bioimpedance from the last Reading"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/rounded_background"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center_horizontal"
+                            >
+                            <TextView
+                                android:id="@+id/patientid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+
+                                android:text="Average Bioimpedance"
+                                android:textSize="12dp"
+                                android:textColor="@color/black"
+                                android:textStyle="" />
+                            <TextView
+                                android:id="@+id/avg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+
+
+                                android:text="Average Bioimpedance from last month"
+                                android:textSize="15dp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+            </ScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Readings table-->
+<!--Cardview to show some elevation in displaying the list of groceries added by the user-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="1000dp"
+
+    android:backgroundTint="#ffffff"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="5dp">
+    <!--The elements in each element of the list of groceries added by the user are arranged in Relative layout-->
+
+    <!--The itemname,quantity and price are arranged in linear layout with horizontal orienation-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_margin="3dp"
+                android:id="@+id/value1"/>
+            <TextView
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_margin="3dp"
+                android:id="@+id/value2"/>
+            <!-- <TextView
+                 android:layout_width="8dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="2"
+                 android:text="Name"
+                 android:textColor="@color/black"
+                 android:padding="4dp"
+                 android:layout_margin="3dp"
+                 android:id="@+id/value3"/>-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_margin="3dp"
+                android:id="@+id/frequency"/>
+            <TextView
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_margin="3dp"
+                android:id="@+id/p1"/>
+            <TextView
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_margin="3dp"
+                android:id="@+id/p2"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

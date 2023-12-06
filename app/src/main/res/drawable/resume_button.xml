@@ -1,0 +1,16 @@
+<!-- triangle_shape.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="2dp"
+    android:height="2dp"
+
+    android:viewportWidth="50"
+    android:viewportHeight="50">
+
+    <!-- Define the triangle path without setting fill color -->
+    <path
+        android:pathData="M0,0 L48,24 0,48 Z"
+        android:fillColor="@color/black"/>
+
+    <!-- Image to be filled within the entire vector shape -->
+
+</vector>
